@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(color: kTextColor),
           bodyText2: TextStyle(color: kTextColor),
         ),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.yellow,
       ),
       routes: routes,
       initialRoute: SplashScreen.routeName,
