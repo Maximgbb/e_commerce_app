@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/components/no_account_text.dart';
 import 'package:e_commerce_app/components/social_card.dart';
-import 'package:e_commerce_app/screens/sign_in/components/sign_form.dart';
+import 'package:e_commerce_app/screens/sign_in/components/sign_in_form.dart';
 import 'package:e_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +33,7 @@ class Body extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
-                const SignForm(),
+                const SignInForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

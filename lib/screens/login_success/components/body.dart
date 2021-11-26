@@ -23,12 +23,12 @@ class Body extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         SizedBox(
           width: SizeConfig.screenWidth * 0.6,
           child: DefaultButton(text: 'Back to Home', press: () {}),
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }
