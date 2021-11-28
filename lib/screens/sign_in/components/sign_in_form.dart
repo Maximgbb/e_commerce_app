@@ -91,7 +91,8 @@ class _SignInFormState extends State<SignInForm> {
       onChanged: (value) {
         if (value.isNotEmpty) {
           removeError(error: kEmailNullError);
-        } else if (emailValidatorRegExp.hasMatch(value)) {
+        }
+        if (emailValidatorRegExp.hasMatch(value)) {
           removeError(error: kInvalidEmailError);
         }
       },
@@ -99,7 +100,7 @@ class _SignInFormState extends State<SignInForm> {
         if (value!.isEmpty) {
           addError(error: kEmailNullError);
           return '';
-        } else if (!emailValidatorRegExp.hasMatch(value)) {
+        } else if (!emailValidatorRegExp.hasMatch(value) && value.isNotEmpty) {
           addError(error: kInvalidEmailError);
           return '';
         }
@@ -121,7 +122,8 @@ class _SignInFormState extends State<SignInForm> {
       onChanged: (value) {
         if (value.isNotEmpty) {
           removeError(error: kPassNullError);
-        } else if (value.length >= 8) {
+        }
+        if (value.length >= 8) {
           removeError(error: kShortPassError);
         }
       },
@@ -133,6 +135,7 @@ class _SignInFormState extends State<SignInForm> {
           addError(error: kShortPassError);
           return '';
         }
+        return null;
       },
       decoration: const InputDecoration(
         labelText: 'Password',
